@@ -1,20 +1,25 @@
-# MGET
+# MGET Notes
 
-Deciding habitat definition
+## **Determining cell types given layers overlayed to each others in some area**
 
-(hal ini dilakukan karena dalam satu planning unit atau cell reef proportion tidak 100%.
-satu cell merupakan merupakan proporsi (%) land, reef, dan water)
+This was done because in one cell of planning unit reef proportion is not always 100%. It can consist of reef, land, and or water proportion.
+Therefore, we should first determine types of every single cells in the planning unit.
 
-Penentuan habitat dilakukan dengan prioritas terumbu karang, walaupn nantinya terumbu karang akan diberikan nilai proporsinya dalam satu cell 0 - 1.0
-1) Prioritaskan terumbu karang, jika terumbu karang overlap dengan daratan, maka habitat yang dimasukan adalah terumbu karang
-2) jika land dan water overlap maka area tersebut ditentukan sebagai land
-3) jika water dan terumbu karang overlap maka habitat yang menghuni adalah terumbu karang
+We should have at least three types of cell for our raster planning unit:
+1) reef
+2) land
+3) water
 
-index: land = 0; reef = 2; water = 3;
+To determine those types using the available shapefile data (this data can be overlaid to each other, due to eg. different source of data,base projection, etc) we have to make priority and #1 priority is reef. Although, later reef cells might not be necessary reef habitas as its proportion can be 0%
+1) if reef proportion >0%, set cell as reef cell. Other cells then can be land or water.
+2) if land and water layers are overlap, set it as land cell.
+3) if water and reef layers are overlap, set it as reef.
 
-if habitat
+
+**index: land = 0; reef = 2; water = 3; **
 
 
+## **Number of cells of raster data set**
 Apparently, number of cells of land water raster does not have to be same as the reef proportion raster 
 
 sebenerny yang harus diberi ID tu adalah reef habitatnya saja atau land water juga?
