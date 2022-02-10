@@ -39,29 +39,24 @@ we can see the red patch on image below, the largest red patch actually contains
 
 ![weird cells 1](https://user-images.githubusercontent.com/73259648/153316365-652dbfee-8ba1-4612-81d6-a8722fc7bae9.JPG)
 
-sebenerny yang harus diberi ID tu adalah reef habitatnya saja atau land water juga?
-Nampaknya hanya reef habitat yang berikan ID, reef habitat bisa memiliki ID yang sama jika merupakan reef yang sama 
+## Reef IDs
+IDs can be done only for reef patch. Land and water patches do not have to have IDs.
 
-karena dasar penentuan D habitat adalah planning unit, maka ID reef bisa berbeda beda walaupun satu reef sebenernya.
-Ini akan berpengaruh pada saat seeding larvae, tiap ID akan di seed sejulah larvae yang sudah di set up.
-Jika satu reef memiliki 2 ID maka adkan ada dua kali seeding
-JIka satu reef hanya memiliki satu ID maka hanya akan sekali seeding
+_**Larvae seeding**_ 
+Larval was seeded to each reef habitat based on Reef IDs.
+There are two ways to seed the larvae.
+1) one reef one ID, this means one reef can consist of more than one cell. Reefs can have same IDs
+2) Each IDs for each reef cell. Reef extent to more than 10x10km in size. That will include more than one cell. Another alternative, we can use same reef ID for many reef cells
 
+## cell size or layer extent
+each raster data set should have: 1) same cell size (e.g. 1km, 10km); 2) layer extent (minimum and maximum extent for each side (north, south, east, west) for each layer
 
-karena berbasis raster asumsinya raster land dan water tidak perlu
-di sederhanakan.  Karena raster size setiap habitat bisa sama atau beda
+1) set land and water layer (as a one layer) area as masking (there is gap inside the layer, as reef might exist)
+![reef gap](https://user-images.githubusercontent.com/73259648/153319767-b76efa25-8aaf-4e68-84fc-ef36d539c821.JPG)
 
-dan land water tidak perlu diberikan ID seperti halnya reef.
-Reef dengan size raster yang sama harus diberikan ID dan reef proportion
+2) create a full extent of raster reef data set. This may include land and water area (identified by 0% reef proportion) 
+   ![reef full extent](https://user-images.githubusercontent.com/73259648/153319996-6b36fb52-6ba5-4733-94f1-cea3382cf861.JPG)
 
-
-jika dibedakan bentuk raster reef dan landwater maka simulasi 
-larva dispersal tidak bisa dilakukan (error) karena cell size atau extentny berbeda
-
-Kemngkinan solusinya adalah:
-1) jadikan land water sebagai masking (namun yang ada bagian reef nya dijadikan bolong)
-2) buat raster reef habitat yang mencakup keseluaruhan extent atau cell size
-   habitat lain(land/water) diwakili dengan reef prop = 0
 ........................................................
 Solusi di atas berhasil
 ........................................................
