@@ -33,7 +33,11 @@ cell size adjustment cannot be done directly through the available planning unit
 ## 10km adjustment and reef cell
 * it seems weird for some cells. because it is defined as reef cell due to consisting a small amount of reef proportion (e.g. 1%) . Therefore, land cell doesnt exist. It is changed by reef cell. 
 
-![weird cells](https://user-images.githubusercontent.com/73259648/153316136-69e3e8e5-fda6-4fd9-956f-23bbeb894bbb.JPG)
+we can see the red patch on image below, the largest red patch actually contains land area. However, it is defined only as reef due to they have some reef proportion
+
+![weird cells](https://user-images.githubusercontent.com/73259648/153316511-5cac84e5-c3fa-49ee-83bf-a602cf402720.JPG)
+
+![weird cells 1](https://user-images.githubusercontent.com/73259648/153316365-652dbfee-8ba1-4612-81d6-a8722fc7bae9.JPG)
 
 sebenerny yang harus diberi ID tu adalah reef habitatnya saja atau land water juga?
 Nampaknya hanya reef habitat yang berikan ID, reef habitat bisa memiliki ID yang sama jika merupakan reef yang sama 
