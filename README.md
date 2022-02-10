@@ -57,11 +57,7 @@ each raster data set should have: 1) same cell size (e.g. 1km, 10km); 2) layer e
 2) create a full extent of raster reef data set. This may include land and water area (identified by 0% reef proportion) 
    ![reef full extent](https://user-images.githubusercontent.com/73259648/153319996-6b36fb52-6ba5-4733-94f1-cea3382cf861.JPG)
 
-........................................................
-Solusi di atas berhasil
-........................................................
-sekarang tinggal menambahkan data oseanografi HYCOM.
+This solution worked well
 
-
-............................................................
-Sebelumnya
+## adding HYCOM data into larva dispersal analysis
+unfortunately, too complex working directory (eg. connected to onedrive) does not work well in Arcmap toolbox. Thus, input and output directory should be on local directory to avoid errors while simulating.
