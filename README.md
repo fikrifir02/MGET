@@ -22,6 +22,19 @@ To determine those types using the available shapefile data (this data can be ov
 ## **Number of cells of raster data set**
 Apparently, number of cells of land water raster does not have to be same as the reef proportion raster 
 
+
+## **Adjusting cell size**
+cell size adjustment cannot be done directly through the available planning unit (e.g. 1km). Adjustment has to be done from :
+1) create new planning unit (e.g. 10 km)
+2) create new ID for each cells
+3) calculate reef proportion in each cell
+
+
+## 10km adjustment and reef cell
+* it seems weird for some cells. because it is defined as reef cell due to consisting a small amount of reef proportion (e.g. 1%) . Therefore, land cell doesnt exist. It is changed by reef cell. 
+
+![weird cells](https://user-images.githubusercontent.com/73259648/153316136-69e3e8e5-fda6-4fd9-956f-23bbeb894bbb.JPG)
+
 sebenerny yang harus diberi ID tu adalah reef habitatnya saja atau land water juga?
 Nampaknya hanya reef habitat yang berikan ID, reef habitat bisa memiliki ID yang sama jika merupakan reef yang sama 
 
