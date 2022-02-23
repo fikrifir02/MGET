@@ -61,3 +61,17 @@ This solution worked well
 
 ## adding HYCOM data into larva dispersal analysis
 unfortunately, too complex working directory (eg. connected to onedrive) does not work well in Arcmap toolbox. Thus, input and output directory should be on local directory to avoid errors while simulating.
+
+
+## Data sources
+1) Wilayah Pengelolaan Perikanan/Fisheries Management Area - 2011 - Pusat Riset Kelautan
+2) Coral reef Distribution - 500m grided reef distribution - World Resources Institute (WRI)
+3) Administration boundariesss - RBI 250K - tanah air
+
+
+# Data analysissss
+* RBI shapefile was dissolved based on province administrative boundaries
+* WRI reef distribution was clipped only for WPP713 region
+* planning unit was created from the WPP RI 714 feature which was clipped from the whole WPP RI shapefile
+* reef area was measured in each cell of planning unit to estimate the proportion of reef in each cell - reef proportion is required in biophysical model (MGET)
+* 
