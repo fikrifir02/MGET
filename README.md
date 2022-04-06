@@ -69,7 +69,7 @@ unfortunately, too complex working directory (eg. connected to onedrive) does no
 3) Administration boundariesss - RBI 250K - tanah air
 
 
-# Data analysissss
+# Data analysis
 * RBI shapefile was dissolved based on province administrative boundaries
 * WRI reef distribution was clipped only for WPP713 region
 * planning unit was created from the WPP RI 714 feature which was clipped from the whole WPP RI shapefile
